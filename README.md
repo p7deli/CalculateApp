@@ -1,5 +1,5 @@
 ## Hello welcome
-<p>install pip customtkinter</p>
+<p>pip install customtkinter</p>
 <h>run file</h>
 
 <br><br>
