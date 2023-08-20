@@ -1,7 +1,6 @@
 ## Hello welcome
 
-![Screenshot (2793)](https://github.com/p7deli/CalculateApp/assets/124894066/fc63ca50-196c-4576-8bf4-add0f8758be5)
-
+https://github.com/p7deli/CalculateApp/assets/124894066/7dbafbfa-319d-4a22-ad5f-3e666ea8d343
 
 <p>pip install customtkinter</p>
 <h>run file</h>
