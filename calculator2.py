@@ -1,47 +1,50 @@
 import customtkinter as tk
+import tkinter
 
-class Calculate(tk.CTk):
+class Calculate(tkinter.Tk):
     def __init__(self):
         super().__init__()
         tk.set_appearance_mode("dark")
         tk.set_default_color_theme("blue")
-        self.geometry("815x585")
+        self.geometry(f"{705}x{540}+{300}+{50}")
         self.resizable(width=False, height=False)
+        self.iconbitmap("icons\Calculator_30001.ico")
         
         self.title('Application CALCULATOR')
 
         self.frame_window = tk.CTkFrame(self)
-        self.frame_window.grid(row=0, pady=10, padx=50)
+        self.frame_window.grid(row=0, pady=2, padx=2)
 
         self.Label_name = tk.CTkLabel(self.frame_window, text="Calculator",
                                    font=("Arial", 50, "bold"))
         self.Label_name.grid(row=0, column=0, pady=50, padx=100)
+        
         self.Text_box = tk.CTkEntry(self.frame_window, width=600,
-                                    height=50, font=("Arial", 30)
+                                    height=30, font=("Arial", 20)
                                     , placeholder_text="Enetr number ...")
         self.Text_box.grid(row=1, ipadx=40, ipady=20, padx=10, pady=10)
 
         self.button_frame = tk.CTkFrame(self)
-        self.button_frame.grid(row=1, pady=10, padx=50)
+        self.button_frame.grid(row=1, pady=2, padx=2)
 
-        self.create_button("1", self.button_frame, 0, 0, lambda: self.add_number(1))
-        self.create_button("2", self.button_frame, 0, 1, lambda: self.add_number(2))
-        self.create_button("3", self.button_frame, 0, 2, lambda: self.add_number(3))
-        self.create_button("4", self.button_frame, 1, 0, lambda: self.add_number(4))
-        self.create_button("5", self.button_frame, 1, 1, lambda: self.add_number(5))
-        self.create_button("6", self.button_frame, 1, 2, lambda: self.add_number(6))
-        self.create_button("7", self.button_frame, 2, 0, lambda: self.add_number(7))
-        self.create_button("8", self.button_frame, 2, 1, lambda: self.add_number(8))
-        self.create_button("9", self.button_frame, 2, 2, lambda: self.add_number(9))
-        self.create_button("0", self.button_frame, 3, 1, lambda: self.add_number(0))
+        self.create_button("1", self.button_frame, 0, 0, lambda: self.add_number(1), "#309fb3")
+        self.create_button("2", self.button_frame, 0, 1, lambda: self.add_number(2), "#309fb3")
+        self.create_button("3", self.button_frame, 0, 2, lambda: self.add_number(3), "#309fb3")
+        self.create_button("4", self.button_frame, 1, 0, lambda: self.add_number(4), "#309fb3")
+        self.create_button("5", self.button_frame, 1, 1, lambda: self.add_number(5), "#309fb3")
+        self.create_button("6", self.button_frame, 1, 2, lambda: self.add_number(6), "#309fb3")
+        self.create_button("7", self.button_frame, 2, 0, lambda: self.add_number(7), "#309fb3")
+        self.create_button("8", self.button_frame, 2, 1, lambda: self.add_number(8), "#309fb3")
+        self.create_button("9", self.button_frame, 2, 2, lambda: self.add_number(9), "#309fb3")
+        self.create_button("0", self.button_frame, 3, 1, lambda: self.add_number(0), "#309fb3")
         self.create_button("+", self.button_frame, 0, 3,
-                           lambda: self.add_operation("+"), "black")
+                           lambda: self.add_operation("+"), "#4d3aab")
         self.create_button("-", self.button_frame, 1, 3,
-                           lambda: self.add_operation("-"), "black")
+                           lambda: self.add_operation("-"), "#4d3aab")
         self.create_button("*", self.button_frame, 2, 3,
-                           lambda: self.add_operation("*"), "black")
+                           lambda: self.add_operation("*"), "#4d3aab")
         self.create_button("/", self.button_frame, 3, 3,
-                           lambda: self.add_operation("/"), "black")
+                           lambda: self.add_operation("/"), "#4d3aab")
         self.create_button("=", self.button_frame, 3, 2, self.calculate, "green")
         self.create_button("C", self.button_frame, 3, 0, self.clear, "red")
 
